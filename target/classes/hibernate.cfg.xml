@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- SQL Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://mysql834.umbler.com:41890/clinicaes2</property>
+        <property name="hibernate.connection.username">es2aluno</property>
+        <property name="hibernate.connection.password">pucminas</property>
+
+        <!-- Show SQL Queries -->
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">false</property>
+
+        <!-- Contextual Session -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Entity Mapping -->
+        <mapping class="com.jcg.hibernate.crud.operations.entity.Medico" />
+        <mapping class="com.jcg.hibernate.crud.operations.entity.Paciente" />
+        <mapping class="com.jcg.hibernate.crud.operations.entity.Tratamento" />
+    </session-factory>
+</hibernate-configuration>
