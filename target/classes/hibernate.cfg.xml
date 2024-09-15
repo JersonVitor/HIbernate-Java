@@ -10,9 +10,9 @@
 
         <!-- Database Connection Settings -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://mysql834.umbler.com:41890/clinicaes2</property>
-        <property name="hibernate.connection.username">es2aluno</property>
-        <property name="hibernate.connection.password">pucminas</property>
+        <property name="hibernate.connection.url"></property>
+        <property name="hibernate.connection.username"></property>
+        <property name="hibernate.connection.password"></property>
 
         <!-- Show SQL Queries -->
         <property name="hibernate.show_sql">false</property>
