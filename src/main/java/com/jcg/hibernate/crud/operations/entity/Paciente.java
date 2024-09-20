@@ -12,7 +12,7 @@ import jakarta.persistence.*;
 
 // em table deve ser o nome que está exatamente no php
 @Entity
-@Table(name = "Paciente785540")
+@Table(name = "Paciente")
 public class Paciente implements Serializable {
 
     @Serial

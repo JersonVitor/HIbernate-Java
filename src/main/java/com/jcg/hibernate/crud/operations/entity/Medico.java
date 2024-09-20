@@ -11,7 +11,7 @@ import com.jcg.hibernate.crud.operations.util.Util;
 
 
 @Entity
-@Table(name = "Medico785540")
+@Table(name = "Medico")
 public class Medico implements Serializable{
 
     @Serial

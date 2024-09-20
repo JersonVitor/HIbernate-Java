@@ -5,7 +5,7 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Tratamento785540")
+@Table(name="Tratamento")
 public class Tratamento implements Serializable{
 
     @EmbeddedId

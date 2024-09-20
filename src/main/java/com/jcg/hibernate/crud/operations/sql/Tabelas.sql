@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `Medico785540` (
+CREATE TABLE IF NOT EXISTS `Medico` (
 	`salario` double NOT NULL,
 	`especialidade` varchar(255) NOT NULL,
 	`crm` varchar(255) NOT NULL UNIQUE,
@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `Medico785540` (
 	PRIMARY KEY (`crm`)
 );
 
-CREATE TABLE IF NOT EXISTS `Paciente785540` (
+CREATE TABLE IF NOT EXISTS `Paciente` (
 	`nome` varchar(255) NOT NULL,
 	`endereco` varchar(255) NOT NULL,
 	`telefone` varchar(255) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `Paciente785540` (
 	PRIMARY KEY (`cpf`)
 );
 
-CREATE TABLE IF NOT EXISTS `Tratamento785540` (
+CREATE TABLE IF NOT EXISTS `Tratamento` (
 	`responsavel` bool NOT NULL,
 	`cpf_paciente` varchar(255) NOT NULL,
 	`crm_medico` varchar(255) NOT NULL
@@ -24,6 +24,6 @@ CREATE TABLE IF NOT EXISTS `Tratamento785540` (
 
 
 
-ALTER TABLE `Tratamento785540` ADD CONSTRAINT `Tratamento785540_fk1` FOREIGN KEY (`cpf_paciente`) REFERENCES `Paciente785540`(`cpf`);
+ALTER TABLE `Tratamento` ADD CONSTRAINT `Tratamento_fk1` FOREIGN KEY (`cpf_paciente`) REFERENCES `Paciente`(`cpf`);
 
-ALTER TABLE `Tratamento785540` ADD CONSTRAINT `Tratamento785540_fk2` FOREIGN KEY (`crm_medico`) REFERENCES `Medico785540`(`crm`);
+ALTER TABLE `Tratamento` ADD CONSTRAINT `Tratamento_fk2` FOREIGN KEY (`crm_medico`) REFERENCES `Medico`(`crm`);
